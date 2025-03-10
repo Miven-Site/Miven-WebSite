@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#all {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-color: #FFFFFFE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#바다표지 {
+    background-image: url("../imgs/바다_표지1.png");
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#레이어 {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    width: 118px;
+    height: 36px;
+    color: #FFFFFF;
+}
+
+#Group {
+    position: absolute;
+    top: 50px;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    color: #FFFFFF;
+}
+
+#Wellcome {
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 10%; /* Welcome 텍스트를 위로 올리기 위해 top 값을 조정 */
+    left: 50%;
+    width: 123px;
+    height: 48px;
+    color: #4C5D91;
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+h1 {
+    position: absolute;
+    width: 579px;
+    height: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 220px; /* h1의 위치도 조정하여 Welcome 텍스트 아래에 오도록 */
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 160%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 50px;
+        width: 90%;
+        top: 200px; /* 반응형에서 h1의 위치도 조정 */
+    }
+    #Wellcome {
+        font-size: 26px;
+        top: 8%; /* 반응형에서 Welcome 텍스트의 위치도 조정 */
+    }
+}
+
+@media (max-width: 768px) {
+    #레이어 {
+        top: 30px;
+        left: 20px;
+        width: 100px;
+    }
+    
+    #Group {
+        top: 30px;
+        right: 5%;
+        width: 35px;
+    }
+    
+    h1 {
+        font-size: 40px;
+        top: 170px; /* 반응형에서 h1의 위치 조정 */
+    }
+    
+    #Wellcome {
+        font-size: 22px;
+        top: 6%; /* 반응형에서 Welcome 텍스트의 위치 조정 */
+    }
+}
+
+@media (max-width: 480px) {
+    #레이어 {
+        top: 20px;
+        left: 10px;
+        width: 80px;
+    }
+    
+    #Group {
+        top: 20px;
+        right: 5%;
+        width: 30px;
+    }
+    
+    h1 {
+        font-size: 30px;
+        top: 150px; /* 반응형에서 h1의 위치 조정 */
+    }
+    
+    #Wellcome {
+        font-size: 18px;
+        top: 5%; /* 반응형에서 Welcome 텍스트의 위치 조정 */
+    }
+}

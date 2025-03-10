@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"> 
+    <meta charset="UTF-8">
+    <title>Member</title>
+</head>
+<body>
+     <div id="video-background">
+         <video autoplay muted loop>
+            <source src="바다 배경.mp4">
+        </div>
+        <div id="content">
+
+    <h>Member</h>
+
+
+    <h5>20기&nbsp;&nbsp;&nbsp;21기</h5>
+ 
+
+    <div class="container1">
+        <div name>
+        <img class="image1" src="사각형.png" alt="사각형">
+
+        <img class="image2" src="해원언니.png" alt="해원언니">
+        
+        <div class = "haewon">이&nbsp;해&nbsp;원</div>
+        <div class = "n">New&nbsp;media&nbsp;web&nbsp;Solution</div>
+
+        <img class="image3" src="사각형.png" alt="사각형">
+
+        <img class="image4" src="가윤언니.png" alt="가윤언니">
+
+        <div class = "gayun">양&nbsp;가&nbsp;윤</div>
+        <div class = "e">New&nbsp;media&nbsp;web&nbsp;Solution</div>
+
+    </div>
+        </div>
+
+    <div class="container2">
+        <div name>
+     
+        <img class="image5" src="사각형.png" alt="사각형">
+        
+        <img class="image6" src="지수언니.png" alt="지수언니">
+
+        <div class = "jisoo">이&nbsp;지&nbsp;수</div>
+        <div class = "w">New&nbsp;media&nbsp;Software</div>
+
+        <img class="image7" src="사각형.png" alt="사각형">
+
+        <img class="image8" src="선영언니.png" alt="선영언니">
+
+        <div class = "sun">정&nbsp;선&nbsp;영</div>
+        <div class = "s">New&nbsp;media&nbsp;Software</div>
+
+        <img class="image9" src="사각형.png" alt="사각형">
+
+        <img class="image10" src="채원언니.png" alt="채원언니">
+
+        <div class = "won">황&nbsp;채&nbsp;원</div>
+        <div class = "c">New&nbsp;media&nbsp;Design</div>
+
+    </div>
+        </div>
+
+
+    <div class="container3">
+        <div name>
+     
+        <img class="image11" src="사각형.png" alt="사각형">
+
+        <img class="image12" src="김가현.png" alt="김가현">
+
+        <div class = "hyun">김&nbsp;가&nbsp;현</div>
+        <div class = "g">New&nbsp;media&nbsp;web&nbsp;Solution</div>
+
+        <img class="image13" src="사각형.png" alt="사각형">
+
+        <img class="image14" src="김예나2.png" alt="김예나">
+
+        <div class = "yena">김&nbsp;예&nbsp;나</div>
+        <div class = "y">New&nbsp;media&nbsp;web&nbsp;Solution</div>
+
+        <img class="image15" src="사각형.png" alt="사각형">
+
+        <img class="image16" src="정상미.png" alt="정상미">
+
+        <div class = "sang">정&nbsp;상&nbsp;미</div>
+        <div class = "m">New&nbsp;media&nbsp;web&nbsp;Solution</div>
+
+    </div>
+        </div>
+
+    <div class="container4">
+        <div name>
+     
+        <img class="image17" src="사각형.png" alt="사각형">
+        
+        <img class="image18" src="연아윤1.png" alt="연아윤">
+
+        <div class = "yun">연&nbsp;아&nbsp;윤</div>
+        <div class = "a">New&nbsp;media&nbsp;web&nbsp;Solution</div>
+
+        <img class="image19" src="사각형.png" alt="사각형">
+
+        <img class="image20" src="오지은.png" alt="오지은">
+
+        <div class = "eun">오&nbsp;지&nbsp;은</div>
+        <div class = "o">New&nbsp;media&nbsp;web&nbsp;Solution</div>
+
+        <img class="image21" src="사각형.png" alt="사각형">
+
+        <img class="image22" src="조혜원.png" alt="조혜원">
+
+        <div class = "jo">조&nbsp;혜&nbsp;원</div>
+        <div class = "h">New&nbsp;media&nbsp;Design</div>
+
+    </div>
+        </div>
+
+    
+
+</body>
+</html>

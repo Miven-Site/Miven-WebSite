@@ -1,0 +1,26 @@
+/* 이건 공통으로 사용되는 css 파일이야! */
+html,
+body{
+    margin: 0;
+    padding: 0;
+    /* margin, padding 을 0으로 초기화 시켜주는 이유 : 내가 따로 설정하지 않았어도 html에서 기본적으로 margin을 설정해놓음 */
+}
+*{ /* '*' <- 이건 전체 요소에 적용한다는 표시야 */
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+:root{
+    --primary-color: #3998FF;/* 여기서 --primary-color는 변수 뒤에는 변수에 지정된 색상*/
+    --white: #ffffff;
+    --black: #000000;
+    
+    --font1: 'Noto Sans KR', sans-serif; /* 만약 피그마에 폰트가 Noto Sans라고 쓰여있으면 이걸로 쓰면 됨!! 이것도 마찬가지로 font-family: var(--font1); 이렇게 쓰면 돼! 근데 딱히 차이점이 없어서.. 티가 안날수도 */
+}
+/* 색상 가져올땐 
+ex) color: var(--primary-color); 
+이런 식으로 var() 괄호 안에 저 변수를 넣어주면 됨
+*/
+
+/* 이 코드는 스크롤바가 안보이게 하는 코드!! */
+::-webkit-scrollbar{
+    background-color: transparent;
+}

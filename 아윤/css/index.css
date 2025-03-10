@@ -28,12 +28,10 @@ body {
 }
 
 .mem {
-    font-size: 30px; 
-    font-weight: bold;
+    font-size: 20px; 
     text-align: center;
     color: white;
 }
-
 
 /* 컨텐츠 스타일 */
 #content {
@@ -46,10 +44,36 @@ body {
 
 .members {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6개씩 정렬 */
-    gap: 30px; /* 간격 조정 */
+    grid-template-columns: repeat(6, 1fr); /* 기본: 6개씩 */
+    gap: 30px;
     justify-items: center;
     padding-top: 50px;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 1200px) {
+    .members {
+        grid-template-columns: repeat(3, 1fr); /* 태블릿: 3개씩 */
+    }
+}
+
+@media (max-width: 768px) {
+    .members {
+        grid-template-columns: repeat(2, 1fr); /* 모바일: 2개씩 */
+    }
+}
+
+/* 초기에는 완전히 숨김 */
+.members {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 스크롤 되면 동시에 나타남 */
+.members.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card {
@@ -64,29 +88,26 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: 98px;
+    margin-top: 95px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
 
 /* 정보 박스 */
 .info-box {
     position: absolute;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.7); /* 투명한 흰색 배경 */
+    background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     text-align: left;
     font-size: 14px;
 }
 
-
-
 /* 이름 스타일 */
 .name {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 600;
     color: black;
     margin-bottom: 5px;
 }
@@ -108,6 +129,7 @@ body {
     display: inline-block;
 }
 
+/* 기수 라벨 */
 .batch-label {
     font-size: 16px;
     color: white;

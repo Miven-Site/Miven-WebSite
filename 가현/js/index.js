@@ -97,42 +97,27 @@
 //         setInterval(createBubble, 400);
 
 document.addEventListener("DOMContentLoaded", function () {
-
-
     const texts = document.querySelectorAll(".scroll_main__text");
     let index = 0;
     let baseOffset = 10; // 초기
     let step = 30;
     let lastTextOffset = 20;
 
-    // texts.forEach((text, i) => {
-    //     text.style.transform = `translateY(${baseOffset + i * step}px)`;
-
-    // });
 
     texts.forEach((text, i) => {
         let offset = baseOffset + i * step;
         if (i === texts.length - 1) {
-            offset += lastTextOffset; // 마지막 텍스트에만 추가 간격 적용
+            offset += lastTextOffset;
         }
         text.style.transform = `translateY(${offset}px)`;
     });
-
-    // function updateTextPositions() {
-    //     for (let i = 0; i <= index; i++) {
-    //         let newOffset = baseOffset - (index - i) * step; // (예: -60, -80, -100, ...)
-
-
-    //         texts[i].style.transform = `translateY(${newOffset}px)`;
-    //     }
-    // }
 
     function updateTextPositions() {
         for (let i = 0; i <= index; i++) {
             let newOffset = baseOffset - (index - i) * step;
 
             if (i === texts.length - 1) {
-                newOffset += lastTextOffset; // 마지막 텍스트는 추가 간격 유지
+                newOffset += lastTextOffset;
             }
 
             texts[i].style.transform = `translateY(${newOffset}px)`;

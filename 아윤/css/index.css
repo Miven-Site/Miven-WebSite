@@ -28,7 +28,7 @@ body {
 }
 
 .mem {
-    font-size: 20px; 
+    font-size: 20px;
     text-align: center;
     color: white;
 }
@@ -44,22 +44,69 @@ body {
 
 .members {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 기본: 6개씩 */
+    grid-template-columns: repeat(6, 1fr);
+    /* 기본: 6개씩 */
     gap: 30px;
     justify-items: center;
     padding-top: 50px;
 }
 
+#next-button {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 50px;
+}
+
+/* 화살표 버튼에 마우스를 올렸을 때 */
+#next-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    /* hover 시 불투명하게 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 페이지 전환 애니메이션 */
+.page-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateY(100%);
+    transition: transform 1s ease;
+}
+
+/* 페이지 전환이 활성화 되었을 때 */
+.page-transition.active {
+    transform: translateY(0);
+}
+
 /* 반응형 레이아웃 */
 @media (max-width: 1200px) {
     .members {
-        grid-template-columns: repeat(3, 1fr); /* 태블릿: 3개씩 */
+        grid-template-columns: repeat(3, 1fr);
+        /* 태블릿: 3개씩 */
     }
 }
 
 @media (max-width: 768px) {
     .members {
-        grid-template-columns: repeat(2, 1fr); /* 모바일: 2개씩 */
+        grid-template-columns: repeat(2, 1fr);
+        /* 모바일: 2개씩 */
     }
 }
 

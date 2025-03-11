@@ -1,3 +1,22 @@
+// new TypeIt("#typing-text", {
+//     strings: ["2022년도부터 2024년까지 MIVEN의 추억이 담긴 history 공간입니다."],  // 타이핑할 텍스트
+//     speed: 150,  // 타이핑 속도
+//     loop: false  // 반복하지 않음
+// }).go();
+
+new TypeIt("#typing-text", {
+    strings: ["2022년 ~ 2024년까지 MIVEN의 추억이 담긴 history 공간입니다."],
+    speed: 150,
+    loop: false,
+    afterComplete: function () {
+        setTimeout(function () {
+            $("#typing-text").fadeOut(500, function () {
+                $("#fade-text").fadeIn(1000); // 1초 뒤 두 번째 문구 나타남
+            });
+        }, 1000); // 1초 대기 후 실행
+    }
+}).go();
+
 let roller = document.querySelector('.rolling-list');
 roller.id = 'roller1';
 
@@ -20,35 +39,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function zoomIn(event) {
-    const clickedYearBox = event.currentTarget;
+        const clickedYearBox = event.currentTarget;
 
-    if (!clickedYearBox.closest('li').classList.contains('coming-soon')) {
-        clickedYearBox.style.transform = "scale(1000)";
-        clickedYearBox.style.zIndex = 1;
-        clickedYearBox.style.transition = "ease-in 20s"; //
+        if (!clickedYearBox.closest('li').classList.contains('coming-soon')) {
+            clickedYearBox.style.transform = "scale(1000)";
+            clickedYearBox.style.zIndex = 1;
+            clickedYearBox.style.transition = "ease-in 20s"; //
 
-        if (clickedYearBox.closest('li').classList.contains('first-year')) {
-            setTimeout(function () {
-                window.location.href = '../../가윤2/index.html';
-            }, 1050);
+            if (clickedYearBox.closest('li').classList.contains('first-year')) {
+                setTimeout(function () {
+                    window.location.href = '../../가윤2/index.html';
+                }, 1050);
+            }
+
+            if (clickedYearBox.closest('li').classList.contains('second-year')) {
+                setTimeout(function () {
+                    window.location.href = '../../가윤/index.html';
+                }, 1050);
+            }
+
+            if (clickedYearBox.closest('li').classList.contains('third-year')) {
+                setTimeout(function () {
+                    window.location.href = '../../지은/index.html';
+                }, 1050);
+            }
+
         }
-
-        if (clickedYearBox.closest('li').classList.contains('second-year')) {
-            setTimeout(function () {
-                window.location.href = '../../가윤/index.html';
-            }, 1050);
-        }
-        
-        if (clickedYearBox.closest('li').classList.contains('third-year')) {
-            setTimeout(function () {
-                window.location.href = '../../가윤/index.html';
-            }, 1050);
-        }
-
     }
-}
 
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const listItems = document.querySelectorAll('.rolling-list ul li');
@@ -77,3 +97,51 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateAnimation();
 });
+
+// coming soon ment
+document.addEventListener("DOMContentLoaded", function () {
+    const comingSoonText = document.getElementById("coming-soon-text");
+    const secretBox = document.getElementById("secret-box");
+
+    comingSoonText.addEventListener("click", function () {
+        // console.log("coming soon 클릭");
+        // if (secretBox.style.opacity === "0" || secretBox.style.opacity === "") {
+        //     secretBox.style.opacity = "1";
+        //     secretBox.style.visibility = "visible";
+        // } else {
+        //     secretBox.style.opacity = "0";
+        //     secretBox.style.visibility = "hidden";
+        // }
+        // 메시지 보이기
+        secretBox.style.opacity = "1";
+        secretBox.style.visibility = "visible";
+
+        // 3초 후 자동으로 숨기기
+        setTimeout(function () {
+            secretBox.style.opacity = "0";
+            secretBox.style.visibility = "hidden";
+        }, 3000); // 3000ms = 3초
+
+    });
+});
+
+
+
+// $(document).ready(function () {
+//     // 첫 번째 줄 타이핑 효과
+//     new TypeIt("#typing-text", {
+//         strings: ["2022년도부터 2024년까지 MIVEN의 추억이 담긴 history 공간 입니다."],
+//         speed: 100, // 타이핑 속도
+//         waitUntilVisible: true, // 화면에 보일 때까지 기다리기
+//         cursor: false, // 커서 숨기기
+//     }).go();
+
+//     // 첫 번째 줄 타이핑 완료 후 두 번째 줄 fade-in 효과 적용
+//     new TypeIt("#typing-text", {
+//         afterComplete: () => {
+//             setTimeout(() => {
+//                 $("#fade-text").addClass("show"); // 두 번째 줄 fade-in
+//             }, 1000); // 타이핑이 끝난 후 1초 대기 후 나타나게 설정
+//         }
+//     });
+// });

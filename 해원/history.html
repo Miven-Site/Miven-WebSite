@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="history.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/typeit/dist/index.umd.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
+
 <body>
-<section class="history">
-  <video src="/video/02. sea_background_video.mp4" autoplay loop muted class="background-video"></video>
-  <p class="history-txt">HISTORY</p>
-  <div class="wrap">
-      <div class="rolling-list">
-          <ul>
-              <li class="first-year">
-                  <div class="desc">
-                  </div>
-                  <p>2022</p>
-              </li>
-              <li class="second-year">
-                  <div class="desc">
-                  </div>
-                  <p>2023</p>
-              </li>
-              <li class="third-year">
-                  <div class="desc">
-                  </div>
-                  <p>2024</p>
-              </li>
-              <li class="coming-soon">
-                  <div class="desc">
-                  </div>
-                  <p>Coming-soon</p>
-              </li>
-          </ul>
-      </div>
-  </div>
-</section>
-<script src="history.js"></script>
+    <div class="pageloader"></div>
+    <div class="infraloader is-active"></div>
+
+    <section class="history">
+        <video src="/video/02. sea_background_video.mp4" autoplay loop muted class="background-video"></video>
+        <p class="history-txt">HISTORY</p>
+        <!-- <div class="history-ment">
+            <div class="typing-effect" id="typing-text"></div>
+            <div class="fade-text" id="fade-text">년도를 클릭해서 미벤의 이야기를 구경해보세요</div>
+        </div> -->
+        <div class="history-ment text_container" style="line-height: 1; text-align: center;">
+            <div class="typing-effect" id="typing-text"></div>
+            <div class="fade-text" id="fade-text" style="display: none;">물방울을 클릭해서 MIVEN의 이야기를 구경해보세요</div>
+        </div>
+        <div class="wrap">
+            <div class="rolling-list">
+                <ul>
+                    <li class="first-year">
+                        <div class="desc">
+                        </div>
+                        <p>2022</p>
+                    </li>
+                    <li class="second-year">
+                        <div class="desc">
+                        </div>
+                        <p>2023</p>
+                    </li>
+                    <li class="third-year">
+                        <div class="desc">
+                        </div>
+                        <p>2024</p>
+                    </li>
+                    <li id="coming-soon-text" class="coming-soon">
+                        <div class="desc">
+                        </div>
+                        <p>Coming-soon</p>
+                        <div class="secret-message" id="secret-box">
+                            23기와 함께 채워나갈 <br> MIVEN history💙
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+
+    </script>
+    <script src="history.js"></script>
 </body>
+
 </html>

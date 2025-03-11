@@ -52,29 +52,29 @@ body {
 @media screen and (max-width: 512px) {
 
   .scroll_main__text {
-      font-size: 60%;
+    font-size: 60%;
   }
 }
 
 @media screen and (max-width: 720px) {
   .scroll_main__text {
-      font-size: 70%;
+    font-size: 70%;
   }
 
   .background-video {
-      height: 100vh;
-      width: auto;
+    height: 100vh;
+    width: auto;
   }
 }
 
 @media screen and (max-width: 540px) {
   .background-video {
-      height: 100vh;
-      width: auto;
+    height: 100vh;
+    width: auto;
   }
 
   .scroll_main__text {
-      font-size: 37%;
+    font-size: 37%;
   }
 }
 

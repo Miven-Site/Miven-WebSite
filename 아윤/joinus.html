@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/joinus.css">
+</head>
+<body>
+    
+    <video src="../video/02. sea_background_video.mp4" autoplay muted loop></video>
+
+    <div id="form-container">
+        <p id="form-title">회원가입</p>
+
+        <div id="studentID-box">
+            <div>
+                <p class="box-title">학번</p>
+            </div>
+            <div class="box-input">
+                <input type="number" id="studentID-input">
+            </div>
+        </div>
+
+        <div id="name-box">
+            <div>
+                <p class="box-title">이름</p>
+            </div>
+            <div class="box-input">
+                <input type="text" id="name-input">
+            </div>
+        </div>
+
+            <div id="phoneNumber-box">
+                <div>
+                    <p class="box-title">전화번호</p>
+                    <p id="sub-title">*숫자만 적어주세요</p>
+                </div>
+                <div class="box-input">
+                    <input type="number" id="phoneNumber-input">
+                </div>
+            </div>
+
+            <div id="email-box">
+                <div>
+                    <p class="box-title">이메일</p>
+                    <p id="sub-title">*학교 이메일을 적어주세요</p>
+                </div>
+                <div class="box-input">
+                    <input type="text" id="email-input">
+                </div>
+            </div>
+
+            <div id="pw-box">
+                <div>
+                    <p class="box-title">비밀번호</p>
+                    <p id="sub-title">*비밀번호 찾기가 불가능합니다. 분실에 주의해주세요.</p>
+                </div>
+                <div class="box-input">
+                    <input type="password" id="pw-input">
+                </div>
+            </div>
+
+            <div id="pwCheck-box">
+                <div>
+                    <p class="box-title">비밀번호 확인</p>
+                </div>
+                <div class="box-input">
+                    <input type="password" id="pwCheck-input">
+                    <img src="./img/pwcheck-white.png" id="pw-white">
+                </div>
+            </div>
+    
+            <input type="button" value="회원가입" id="joinus-button">
+
+            <a href="./login.html">
+                <p id="login">로그인하러가기</p>
+            </a>
+        </div>
+
+
+    <script src="./js/joinus.js"></script>
+
+</body>
+</html>

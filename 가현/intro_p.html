@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인트로 페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        /* 인트로 영상 스타일 */
+        #intro-container {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 사라질 때 적용될 스타일 */
+        .fade-out {
+            opacity: 0;
+            transform: translateY(-100vh);
+        }
+
+        /* 메인 페이지 스타일 */
+        #main-content {
+            display: none;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 인트로 영상 -->
+    <div id="intro-container">
+        <video id="intro-video" autoplay muted>
+            <source src="video/01. join us.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <div id="main-content">
+        <h1>메인 페이지</h1>
+        <p>인트로가 끝나면 이 페이지가 나타납니다.</p>
+    </div>
+
+    <script>
+        const introVideo = document.getElementById("intro-video");
+        const introContainer = document.getElementById("intro-container");
+        const mainContent = document.getElementById("main-content");
+
+        // 영상이 끝나면 페이드아웃 + 슬라이드업 효과 적용
+        introVideo.addEventListener("ended", () => {
+            introContainer.classList.add("fade-out");
+
+            // 애니메이션이 끝난 후 메인 페이지 표시
+            setTimeout(() => {
+                introContainer.style.display = "none";
+                mainContent.style.display = "block";
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>

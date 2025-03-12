@@ -1,0 +1,188 @@
+/* 전체 페이지 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* 비디오 배경 */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: -100px;
+    transition: bottom 0.5s ease;
+}
+
+.mem {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* 컨텐츠 스타일 */
+#content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.members {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 기본: 6개씩 */
+    gap: 30px;
+    justify-items: center;
+    padding-top: 50px;
+}
+
+#next-button {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 50px;
+}
+
+/* 화살표 버튼에 마우스를 올렸을 때 */
+#next-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    /* hover 시 불투명하게 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 페이지 전환 애니메이션 */
+.page-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateY(100%);
+    transition: transform 1s ease;
+}
+
+/* 페이지 전환이 활성화 되었을 때 */
+.page-transition.active {
+    transform: translateY(0);
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 1200px) {
+    .members {
+        grid-template-columns: repeat(3, 1fr);
+        /* 태블릿: 3개씩 */
+    }
+}
+
+@media (max-width: 768px) {
+    .members {
+        grid-template-columns: repeat(2, 1fr);
+        /* 모바일: 2개씩 */
+    }
+}
+
+/* 초기에는 완전히 숨김 */
+.members {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 스크롤 되면 동시에 나타남 */
+.members.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.profile {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 95px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* 정보 박스 */
+.info-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* 이름 스타일 */
+.name {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* 학과 스타일 */
+.department {
+    font-size: 13px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* SNS 링크 */
+.sns a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 기수 라벨 */
+.batch-label {
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: -30px;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+}

@@ -1,0 +1,111 @@
+.zen-kaku-gothic-new-regular {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.AllSen {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    margin-left: 100px;
+}
+
+.Title {
+    margin-left: 100px;
+    margin-top: 277px;
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    margin-bottom: 20px;
+}
+
+.Sub1, .Sub2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 170%;
+}
+
+.Accent {
+    font-weight: bold;
+}
+
+.NewText, .ThirdText {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    position: absolute;
+}
+
+.ThirdText {
+    transform: translateY(130px);
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.slide-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slides-up {
+    opacity: 1;
+    transform: translateY(80px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* 더 작은 화면을 위한 미디어 쿼리 */
+@media (max-width: 600px) {
+    .title, .AllSen {
+        position: absolute;
+    }
+
+    .AllSen {
+        margin-top: 354px;
+        margin-left: 17px;
+    }
+    
+    .Title {
+        margin-top: 300px;
+        margin-left: 17px;
+    }
+}
+
+@media (max-width: 391px) {
+    .Title {
+        margin-top: 241px;
+    }
+}

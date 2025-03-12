@@ -77,11 +77,6 @@ p {
     line-height: 160%;
     color: #000000;
 
-    /* 부모 컨테이너에서 완전한 중앙 정렬 */
-    /* position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);  */
 }
 
 p:hover {
@@ -98,7 +93,7 @@ p:hover {
 
 @media (max-width: 480px) {
     #x {
-        width: 20vw; /* 모바일에서는 더 크게 */
+        width: 20vw;
         right: 7vw;
         top: 7vh;
     }

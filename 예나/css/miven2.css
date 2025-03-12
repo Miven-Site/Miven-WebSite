@@ -49,12 +49,13 @@
 }
 
 #x {
-    position: absolute; /* 위치를 명확히 설정 */
-    width: 20px; /* 크기를 조금 더 크게 설정 */
-    height: 20px;
-    top: -71px; /* 화면 상단에서 떨어진 거리 */
-    right: -790px; /* 화면 오른쪽에서 떨어진 거리 */
-    
+    position: fixed; 
+    width: 20px; 
+    height: auto;
+    right: 5vw; 
+    top: 6vh;
+    z-index: 1000;
+    transition: all 0.3s;
 }
 #x:hover{
     color: #18497d;
@@ -97,16 +98,10 @@ p:hover {
 
 @media (max-width: 480px) {
     #x {
-        position: fixed; /* 고정 위치 사용 */
-        width: 20px;
-        height: 20px;
-        top: 20px; /* 상단에서 20px 떨어진 위치 */
-        right: 20px; /* 우측에서 20px 떨어진 위치 */
-        z-index: 1000; /* 다른 요소 위에 표시 */
+        width: 20vw; /* 모바일에서는 더 크게 */
+        right: 7vw;
+        top: 7vh;
     }
-
-
-
     #rtg{
         width: 200px;
     }

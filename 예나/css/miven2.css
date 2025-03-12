@@ -97,12 +97,15 @@ p:hover {
 
 @media (max-width: 480px) {
     #x {
-        position: absolute; 
-        width: 20px; 
+        position: fixed; /* 고정 위치 사용 */
+        width: 20px;
         height: 20px;
-        top: 64px; 
-        right: 50%; 
+        top: 20px; /* 상단에서 20px 떨어진 위치 */
+        right: 20px; /* 우측에서 20px 떨어진 위치 */
+        z-index: 1000; /* 다른 요소 위에 표시 */
     }
+
+
 
     #rtg{
         width: 200px;

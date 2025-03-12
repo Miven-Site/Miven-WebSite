@@ -48,7 +48,7 @@
     color: #FFFFFF;
 }
 
-#Wellcome {
+#Welcome {
     position: absolute;
     transform: translate(-50%, 0);
     top: 14%;
@@ -84,7 +84,7 @@ h1 {
         width: 90%;
         top: 200px; 
     }
-    #Wellcome {
+    #Welcome {
         font-size: 26px;
         top: 8%; 
     }

@@ -108,4 +108,8 @@ video {
     .Title {
         margin-top: 241px;
     }
+
+    .ThirdText {
+        transform: translateY(130px);
+    }    
 }
